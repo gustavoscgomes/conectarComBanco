@@ -3,7 +3,7 @@ import java.sql.SQLException;
 import java.sql.Connection;
 
 public class Conexao {
-    public static Connection GeraConexao(){
+    public static Connection geraConexao(){
         Connection conexao = null;
         try{
             String url = "jdbc:mysql://localhost/cadastro";
