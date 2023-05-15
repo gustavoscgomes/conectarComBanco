@@ -12,12 +12,21 @@ public class Main {
 
         System.out.println("Nome: ");
         String nome = input.nextLine();
+        System.out.println("Idade: ");
+        int idade = input.nextInt();
 
-        Date dataDeNascimento = new Date(19910512);
+        System.out.println("Data de nascimento no formato AAAA-DD-MM");
+        String data = "1991-05-12";
+        Date dataDeNascimento = Date.valueOf(data);
+
 
         Pessoa p = new Pessoa();
         p.setNome(nome);
+        p.setIdade(idade);
         p.setDataDeNascimento(dataDeNascimento);
+
+//      adicionar data atual
+//        p.setDataDeNascimento(new java.sql.Date(System.currentTimeMillis()));
 
         pessoaDAO.adiciona(p);
 

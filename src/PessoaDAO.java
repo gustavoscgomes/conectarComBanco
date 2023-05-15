@@ -10,12 +10,16 @@ public class PessoaDAO {
         this.connection = new Conexao().geraConexao();
     }
     public void adiciona(Pessoa p) {
-        String sql = "INSERT INTO pessoa(nome,idade, dataDeNascimento) VALUES(?,?)";
+        String sql = "INSERT INTO pessoa(nome,idade, data_de_nascimento) VALUES(?,?,?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, p.getNome());
             stmt.setInt(2, p.getIdade());
             stmt.setDate(3, new Date(p.getDataDeNascimento().getTime()));
+
+//          adicionar data atual
+//            stmt.setDate(3, new java.sql.Date(p.getDataDeNascimento().getTime()));
+
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
