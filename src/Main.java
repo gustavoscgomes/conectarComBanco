@@ -9,14 +9,15 @@ public class Main {
 
         PessoaDAO pessoaDAO = new PessoaDAO();
         Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Nome: ");
         String nome = input.nextLine();
         System.out.println("Idade: ");
         int idade = input.nextInt();
 
-        System.out.println("Data de nascimento no formato AAAA-DD-MM");
-        String data = "1991-05-12";
+        System.out.println("Data de nascimento no formato AAAA-MM-DD");
+        String data = sc.nextLine();
         Date dataDeNascimento = Date.valueOf(data);
 
 
