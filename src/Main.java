@@ -11,6 +11,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Bem vindo ");
         System.out.println("Nome: ");
         String nome = input.nextLine();
         System.out.println("Idade: ");
